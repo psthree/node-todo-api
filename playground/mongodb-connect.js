@@ -16,7 +16,7 @@ MongoClient.connect(
       return console.log('Unable to connect MongoDB server');
     }
 
-    console.log('Connected to MongDB server');
+    console.log('Connected to MongoDB server');
     const db = client.db('TodoApp');
 
     // db.collection('Todos').insertOne(
