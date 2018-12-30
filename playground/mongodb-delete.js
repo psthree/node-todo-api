@@ -20,15 +20,36 @@ MongoClient.connect(
     const db = client.db('TodoApp');
 
     //deleteMany
-    db.collection('Todo')
-      .deleteMany({ text: 'XXX' })
-      .then(result => {
-        console.log(result);
-      });
+    // db.collection('Todos')
+    //   .deleteMany({ text: 'Something I need to do' })
+    //   .then(result => {
+    //     console.log(result);
+    //   });
 
     //deleteOne
+    // db.collection('Todos')
+    //   .deleteOne({
+    //     text: 'Go for a walk'
+    //   })
+    //   .then(result => {
+    //     console.log(result);
+    //   });
 
     //finOneAndDelete
+    //gets deleted data back when deleting
+    // db.collection('Todos')
+    //   .findOneAndDelete({
+    //     _id: "5c27aa8957d02c9854bdefd7" //id: new ObjectID('"5c27aa8957d02c9854bdefd7")
+    //   })
+    //   .then(result => {
+    //     console.log(result);
+    //   });
+
+    db.collection('Todos')
+      .deleteMany({ text: 'read a book' })
+      .then(response => {
+        console.log(response);
+      });
 
     // db.collection('Users')
     //   .find({ name: 'Peter Stema' })
