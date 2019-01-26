@@ -41,6 +41,9 @@ app.listen(3000, () => {
   console.log('Starting up on port 3000 sir');
 });
 
+//same as app:app
+module.exports = { app };
+
 // let newTodo = new Todo({
 //   text: '    test   '
 //   // text: 'Play guitar',
