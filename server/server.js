@@ -37,6 +37,18 @@ app.post('/todos', (req, res) => {
   );
 });
 
+app.get('/todos', (req, res) => {
+  Todo.find().then(
+    todos => {
+      res.send({ todos });
+    },
+    error => {
+      console.log('error', error);
+      res.status(400).send(error);
+    }
+  );
+});
+
 app.listen(3000, () => {
   console.log('Starting up on port 3000 sir');
 });
